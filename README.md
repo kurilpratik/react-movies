@@ -4,11 +4,12 @@
    <div align="center">
      Built this project to brush up on the basics of React by coding out certain intermediate feautres as discussed below.
     </div>
+    <br/><br/>
   <div>
     <img src="https://img.shields.io/badge/-React_JS-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
     <img src="https://img.shields.io/badge/-Appwrite-black?style=for-the-badge&logoColor=white&logo=appwrite&color=FD366E" alt="appwrite" />
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
-    <br/><br/>
+    
   </div>
 </div>
 
@@ -88,7 +89,6 @@ npm run dev
 Open [http://localhost:5173](http://localhost:5173) in your browser to view the project.
 
 ### Goals/Extensions
----
 - [ ] Implement a debounce hook from scratch
 - [ ] Add a new error state for trending movies
 - [ ] An extended view of a movie showing further details
