@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useDebounce } from 'react-use';
+import { Client } from 'appwrite';
 import Search from './components/Search'
 import Spinner from './components/Spinner'
 import MovieCard from './components/MovieCard';
+import { updateSearchCount } from './appwrite';
 
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -36,17 +38,28 @@ const App = () => {
       const endpoint = query
       ? `${API_BASE_URL}/search/movie?query=${encodeURIComponent(query)}`
       : `${API_BASE_URL}/discover/movie?sort_by=popularity.desc`;
+
       const response = await fetch(endpoint, API_OPTIONS);
       if(!response.ok) {
         throw new Error('Failed to fetch movies');
       }
+
       const data = await response.json();
+
       if(data.Response === 'False') {
         setErrorMessage(data.Error || 'Failed to fetch movies');
         setMovieList([]);
         return;
       };
+
       setMovieList(data.results || []);
+
+      // If there's a query and that movie exists (is found)
+      if(query && data.results.length > 0) {
+        updateSearchCount(query, data.results[0]);
+        // Pass the query and the movie that was found for that query
+      }
+
     } catch (error) {
       console.error(`Error in fetchMovies. ${error}`);
       setErrorMessage('Error fetching movies. Please try again later!');
@@ -87,4 +100,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
