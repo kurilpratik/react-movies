@@ -2,9 +2,9 @@
 
    <h3 align="center">A React Based Movies Application</h3>
    <div align="center">
-     Built this project to brush up on the basics of React by coding out certain intermediate feautres as discussed below.
+     Visit the <a href="https://kurilpratik.github.io/react-movies/" target="_blank">website</a>! Built this project to brush up on the basics of React by coding out certain intermediate feautres as discussed below.
     </div>
-    <br/><br/>
+    <br/>
   <div>
     <img src="https://img.shields.io/badge/-React_JS-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
     <img src="https://img.shields.io/badge/-Appwrite-black?style=for-the-badge&logoColor=white&logo=appwrite&color=FD366E" alt="appwrite" />
@@ -17,7 +17,7 @@
 
 Built with React.js for the user interface, Appwrite for the Trending Movies Algorithm, and styled with TailwindCSS. The platform offers a sleek and modern experience for browsing and discovering movies.
 
-This project was made possible by [JavascriptMastery](https://youtu.be/dCLhUialKPQ?si=SBo9AGaspGumxnQ2).
+This project was made possible by [Javascript-Mastery](https://youtu.be/dCLhUialKPQ?si=SBo9AGaspGumxnQ2).
 
 ## Tech Stack
 
