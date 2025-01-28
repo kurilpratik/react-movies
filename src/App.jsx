@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react"
 
-function App() {
-  const [count, setCount] = useState(0)
+const Card = ({ title }) => {
+  const [count, setCount] = useState(0);
+  const [hasLiked, setHasLiked] = useState(false);
+  // State is not persistent, it resets when the browser is refreshed
+  
+  // UseEffect runs twice in Strict Mode, in prod it fixes this or you can remove the Strict Mode from main.jsx
+  // useEffect(() => {
+  //   console.log(`${title} has been liked: ${hasLiked}`)
+  // }) 
+  // This useEffect keeps on firing even when the button has not been clicked and the card has been clicked which is not what we want, so we set a dependency array.
+
+  useEffect(() => {
+    console.log(`${title} has been liked: ${hasLiked}`)
+  }, [hasLiked]) 
+
+  // This type of empty dependency useEffect runs only once when the component is mounted
+  useEffect(() => {
+    console.log('Card Rendered')
+  }, [])
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="card" onClick={() => setCount(count+1)}>
+      <h3>{title} <br /> {count || null}</h3>
+      <button onClick={() => setHasLiked(!hasLiked)}>
+        {hasLiked ? '❤️' : '🤍'}
+      </button>
+    </div>
   )
 }
 
-export default App
+const App = () => {
+
+  return (
+    <div className="card-container">
+      <Card title="Star Wars" rating={5} isCool={true} />
+      <Card title="Avatar"/>
+      <Card title="The Godfather"/>
+    </div>
+  )
+}
+
+export default App;
