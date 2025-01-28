@@ -88,7 +88,8 @@ npm run dev
 
 Open [http://localhost:5173](http://localhost:5173) in your browser to view the project.
 
-### Goals/Extensions
+## Goals/Extensions
+
 - [ ] Implement a debounce hook from scratch
 - [ ] Add a new error state for trending movies
 - [ ] An extended view of a movie showing further details
