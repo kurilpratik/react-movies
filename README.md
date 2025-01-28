@@ -1,6 +1,6 @@
 <div align="center">
 
-   <h3 align="center">A React Based Movies Application</h3>
+   <h2 align="center">A React Based Movies Application</h2>
    <div align="center">
      Visit the <a href="https://kurilpratik.github.io/react-movies/" target="_blank">website</a>! Built this project to brush up on the basics of React by coding out certain intermediate feautres as discussed below.
     </div>
