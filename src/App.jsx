@@ -19,13 +19,15 @@ const API_OPTIONS = {
 
 const App = () => {
   const [searchTerm, setSearchterm] = useState('');
+  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('');
   // State fields can also be passed as props
   // Never chnage states manually, only use the setter function
+
   const [errorMessage, setErrorMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
   const [movieList, setMovieList] = useState([]);
   const [trendingMovies, setTrendingMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('');
 
   // Debounce the search term to prevent making too many API request
   // by waiting for the user to stop typing for 500ms
