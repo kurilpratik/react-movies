@@ -39,8 +39,9 @@ and many more, including code architecture and reusability
 
 ## Advanced Stuff
 
-🚀 **Trending Movies Algorithm**: Displays trending movies based on a dynamic algorithm built using the *Appwrite.io* database features. It stores the search keystrokes along with the first movie that comes up for that searchTerm and the number of times that searchTime has been typed in (count) in the database, and list out the movies in descending order based on the count of the searchTerm.
-🚀 **Debouncing the Search Input**: Implementing the debouncing technique to optimize the *API calls* by deboucing the search input by 500ms, meaning, only when the user stops typing for 1/2 second, the API is called instead of it being called after every keystroke. This was implemented using the *useDebounce hook* from react-use
+🚀 **Trending Movies Algorithm**: Displays trending movies based on a dynamic algorithm built using the **Appwrite.io** database features. It stores the search keystrokes along with the first movie that comes up for that searchTerm and the number of times that searchTime has been typed in (count) in the database, and list out the movies in descending order based on the count of the searchTerm.
+
+🚀 **Debouncing the Search Input**: Implementing the debouncing technique to optimize the **API calls** by deboucing the search input by 500ms, meaning, only when the user stops typing for 1/2 second, the API is called instead of it being called after every keystroke. This was implemented using the **useDebounce hook** from react-use
 
 
 ## Quick Start
