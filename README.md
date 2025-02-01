@@ -39,10 +39,10 @@ and many more, including code architecture and reusability
 
 ## Advanced Stuff
 
-🚀 **Trending Movies Algorithm** :
+🚀 **Trending Movies Algorithm** : <br>
 Displays trending movies based on a dynamic algorithm built using the **Appwrite.io** database features. It stores the search keystrokes along with the first movie that comes up for that searchTerm and the number of times that searchTime has been typed in (count) in the database, and list out the movies in descending order based on the count of the searchTerm.
 
-🚀 **Debouncing the Search Input** :
+🚀 **Debouncing the Search Input** : <br>
 Implementing the debouncing technique to optimize the **API calls** by deboucing the search input by 500ms, meaning, only when the user stops typing for 1/2 second, the API is called instead of it being called after every keystroke. This was implemented using the **useDebounce hook** from react-use
 
 
@@ -79,7 +79,7 @@ npm install appwrite react-use
 Create a new file named `.env.local` in the root of your project and add the following content:
 
 ```env
-VITE_IMDB_API_KEY=
+VITE_TMDB_API_KEY=
 
 VITE_APPWRITE_PROJECT_ID=
 VITE_APPWRITE_DATABASE_ID=
